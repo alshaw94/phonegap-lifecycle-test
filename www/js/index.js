@@ -8,16 +8,16 @@ var launched_count = 0;
     }
 	
 	function updateDisplay() {
-		$("#launched").text("Application activated: " + launched_count);
-		$("#resumed").text("On hold: " + paused_count);
-		$("#paused").text("Application resumed: " + resumed_count);
+		$("#launched").text("Application Started: " + launched_count);
+		$("#resumed").text("Application Paused: " + paused_count);
+		$("#paused").text("Application Resumed: " + resumed_count);
 	}
 
 
     // device APIs are available
     //
     function onDeviceReady() {
-		alert("device ready");
+		alert("Application Activated");
         
 		document.addEventListener("resume", onResume, false);
 		document.addEventListener("pause", onPause, false);
